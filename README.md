@@ -9,9 +9,21 @@ This repository currently contains design documents only:
 - `README.md` — orientation and boundaries
 - `docs/PRD.md` — product requirements (planned)
 - `docs/schema.sql` — proposed SQLite schema (not applied to a live database)
+- `docs/ROADMAP.md` — Version 1 and Version 2 planned scope, gates, and backlog (no release dates)
+- `docs/ACCEPTANCE_CRITERIA.md` — testable checks for those versions (not test results)
+- `docs/USE_CASES.md` — hypothetical operator scenarios
 - `.gitignore` — ignore rules for a later implementation
 
-There is no application code, no running service, no live data connector, and no track record in this repository. Nothing here should be read as a completed product, a backtest, or evidence that any heuristic works.
+There is no application code, no running service, no live data connector, and no track record in this repository. Nothing here should be read as a completed product, a backtest, a delivery schedule, or evidence that any heuristic works.
+
+## Planned versions
+
+Scope is ordered, not scheduled. There are no target ship dates in these documents.
+
+- **Version 1** is a usable minimum: manual watchlist and optional holdings, limited source-linked U.S. equity snapshots, a durable daily briefing that shows freshness and job status, and read-only snapshots of a few **explicitly mapped** Polymarket markets (resolution criteria, spread, liquidity, and as-of time).
+- **Version 2** would add deeper filing metrics and comparisons, historical snapshots, U.S. market-calendar and event context, journal improvements, and operational hardening.
+
+Must-have versus stretch items and entry/acceptance gates are in `docs/ROADMAP.md` and `docs/ACCEPTANCE_CRITERIA.md`. What actually lands depends on permitted data access and tests. Missing data is flagged, not invented.
 
 ## What the product is meant to do
 
@@ -28,7 +40,7 @@ The design treats prediction-market prices as noisy, incomplete reference signal
 
 ## What it is not
 
-QuantRadar is not a broker, robo-advisor, hedge-fund tool, or betting client. The planned MVP will not:
+QuantRadar is not a broker, robo-advisor, hedge-fund tool, or betting client. The planned product will not:
 
 - Place, route, or recommend trades or bets
 - Connect to a brokerage, wallet, exchange account, or payment rail
@@ -56,10 +68,12 @@ Routine collection and briefing generation would be application jobs. Feature wo
 ## Reading the documents
 
 1. Start with the goals, non-goals, and principles in `docs/PRD.md`.
-2. Use `docs/schema.sql` as the proposed data shape. Comments in that file matter; several tables exist to record uncertainty, staleness, and job health rather than “answers.”
-3. Treat every UI label, formula, and mapping described there as planned behavior.
+2. Use `docs/ROADMAP.md` for Version 1 and Version 2 scope and backlog, then `docs/ACCEPTANCE_CRITERIA.md` for the gates that would mark a version complete.
+3. Read `docs/USE_CASES.md` as hypothetical walk-throughs only.
+4. Use `docs/schema.sql` as the proposed data shape. Comments in that file matter; several tables exist to record uncertainty, staleness, and job health rather than “answers.”
+5. Treat every UI label, formula, and mapping described in these documents as planned behavior.
 
-If this tree is later published as a public Git repository, do not commit `.env` files, credentials, local SQLite databases, or personal holdings. Those paths are listed in `.gitignore`.
+Do not commit `.env` files, credentials, local SQLite databases, or personal holdings. Those paths are listed in `.gitignore`.
 
 ## Privacy
 
