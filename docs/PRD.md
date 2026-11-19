@@ -83,9 +83,11 @@ This is personal research software. It is not an advisory service.
 
 Phases are a build order, not a delivery report. None of them is done.
 
+A later, more detailed split of planned Version 1 and Version 2 scope, must-have versus stretch items, and backlog IDs is in `docs/ROADMAP.md`. Testable gates are in `docs/ACCEPTANCE_CRITERIA.md`. Those documents also do not assign release dates or delivery commitments.
+
 ### Phase 0 — Documents (current)
 
-This repository: requirements, proposed schema, ignore rules.
+This repository: requirements, proposed schema, ignore rules, plus the planned Version 1 / Version 2 roadmap, acceptance criteria, and hypothetical use cases.
 
 ### Phase 1 — MVP (planned)
 
@@ -355,6 +357,8 @@ MVP screens (planned, not designed in high fidelity here): briefing, instrument 
 ## 13. Planned acceptance checks
 
 These are acceptance checks for a future implementation. They are not test results, and passing them would still not prove investment efficacy.
+
+The expanded, version-scoped criteria are in `docs/ACCEPTANCE_CRITERIA.md`. Hypothetical walk-throughs are in `docs/USE_CASES.md`.
 
 1. A new watchlist name can be added without any broker login.
 2. A filing snapshot stores period, units, currency, and a working source URL.
