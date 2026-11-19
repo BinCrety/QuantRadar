@@ -1,0 +1,70 @@
+# QuantRadar — local and generated files
+# This project is in the planning stage. Keep secrets and personal data out of git.
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+
+# Next.js / TypeScript / build output
+.next/
+out/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.turbo/
+.vercel/
+
+# Environment and credentials — never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+credentials*.json
+secrets/
+.secrets/
+
+# Local research data and SQLite state — never commit personal holdings
+data/
+var/
+tmp/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+holdings.local.*
+portfolio.local.*
+
+# Logs, caches, OS, editors
+logs/
+*.log
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Misc
+*.orig
+.coverage
+htmlcov/
